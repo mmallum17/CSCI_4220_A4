@@ -1,3 +1,5 @@
+(* Problem Four *)
+
 fun member (x, []) = false
   | member (x, y::ys) = x = y orelse member(x, ys);
 
@@ -14,6 +16,9 @@ fun multiSetIntersection [] = []
         in
             multiSetIntersection(nextIntersection::remainingSets)
         end;
-        
-(* multiSetIntersection([[0,1,2,4], [0,1,4], [0,1], [0,3,4,6,7]]); *)
+
+(* Test Cases *)        
+multiSetIntersection([[0,1,2,4], [0,1,4], [0,1], [0,3,4,6,7]]);
+multiSetIntersection([[0,1,2,4], [0,1,4]]);
+multiSetIntersection([[0,1,2,4]]);
 
